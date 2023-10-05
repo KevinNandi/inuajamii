@@ -3,12 +3,12 @@ const app = express();
 
 
 
-//config
-if (process.env.NODE_ENV !== "PRODUCTION"){
+// config
+if (process.env.NODE_ENV !== "PRODUCTION") {
     require("dotenv").config({
-        path:"backend/config/.env"
-    })
-}
+      path: "backend/config/.env",
+    });
+  }
 
 
 
