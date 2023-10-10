@@ -18,9 +18,22 @@ const Signup = () => {
   };
 
   const handleSubmit = async (e) => {
-    axios.post
+    const config = { headers: { "Content-Type": "multipart/form-data" } };
 
+    const newForm = new FormData();
+    newForm.append("file", avatar);
+    newForm.append("name", name);
+    newForm.append("email", email);
+    newForm.append("password", password);
 
+    axios
+      .post("{${server}/user/create-user", newForm, config)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
