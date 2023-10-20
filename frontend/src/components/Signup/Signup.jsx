@@ -13,7 +13,7 @@ const Signup = () => {
   const [avatar, setAvatar] = useState(null);
 
   const handleFileInputChnage = (e) => {
-    const file = e.target.file[0];
+    const file = e.target.files[0];
     setAvatar(file);
   };
 
